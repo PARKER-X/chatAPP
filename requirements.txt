@@ -1,3 +1,4 @@
 Django==4.0.2
 virtualenv==20.13.2
 channels==4.0.0 
+asgiref==1.0.0
