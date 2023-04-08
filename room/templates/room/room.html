@@ -71,7 +71,7 @@
             'username': userName,
             'room': roomName
         })
-
+        if (chatSocket.readyState === WebSocket.OPEN) {
         chatSocket.send(JSON.stringify(
             {
                 'message': message,
@@ -80,6 +80,9 @@
 
             }
         ));
+        } else{
+            console.log('WebSocket is not open');
+        }
         messageInputDom.value = '';
 
         return false;
